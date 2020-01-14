@@ -30,7 +30,7 @@ set foldenable
 set foldlevelstart=10
 set foldmethod=indent
 
-"Start NerdTree by default
+"Start NerdTree by default if not in BP or MPROCLIB
 autocmd vimenter * if (match(getcwd(),"BP") == -1 && match(getcwd(),"MPROCLIB") == -1) | NERDTree | endif
 
 "Fcous on opened file instead of NerdTree
