@@ -1,0 +1,5 @@
+# exclude everything
+undodir/*
+
+# exception to the rule
+!undodir/.gitkeep 
