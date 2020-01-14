@@ -14,11 +14,19 @@ Add the below to your ~/.vimrc file:
     
 ## Packages
 
+Pathogen
+
+    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 NERDCommenter
     
     \cc - Comments lines of text
+    git clone https://github.com/preservim/nerdcommenter.git ~/.vim/bundle/nerdcommenter
   
 NERDTree - File Drawer
+
+    git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
 
 u2py - Universe Programs hotkeys
     
