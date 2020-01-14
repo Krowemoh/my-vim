@@ -7,6 +7,7 @@ vimrc is commented.
 
     
     git clone --depth=1 https://github.com/Krowemoh/my-vim.git ~/.vim
+    mkdir ~/.vim/undodir
   
 Add the below to your ~/.vimrc file:
     
