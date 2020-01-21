@@ -1,6 +1,8 @@
 execute pathogen#infect()
 syntax on
 
+set mouse=a
+
 colorscheme badwolf
 set background=dark
 

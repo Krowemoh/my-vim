@@ -2,4 +2,4 @@
 undodir/*
 
 # exception to the rule
-!undodir/.gitkeep 
+!undodir/gitkeep 
