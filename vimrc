@@ -1,7 +1,9 @@
 execute pathogen#infect()
 syntax on
+set viminfo='20,<1000,s1000
+set wildmenu
 
-set mouse=a
+"set mouse=a
 
 colorscheme badwolf
 set background=dark
@@ -28,9 +30,9 @@ set ignorecase
 nnoremap <CR> :noh<CR><CR>
 
 "Fold code if it's 10 levels deep
-set foldenable
-set foldlevelstart=10
-set foldmethod=indent
+"set foldenable
+"set foldlevelstart=10
+"set foldmethod=indent
 
 "Start NerdTree by default if not in BP or MPROCLIB
 autocmd vimenter * if (match(getcwd(),"BP") == -1 && match(getcwd(),"MPROCLIB") == -1) | NERDTree | endif
@@ -47,11 +49,14 @@ let g:NERDCustomDelimiters = { 'text': { 'left': '#','right': '' } }
 "Anything under BP, and MPROCLIB will be set to use the syntax highlighter
 autocmd BufRead,BufNewFile */BP/* set syntax=unibasic
 autocmd BufRead,BufNewFile */MPROCLIB/* set syntax=unibasic
+autocmd BufRead,BufNewFile */UBP/* set syntax=unibasic
+
+"Python shortcut
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!uvpython' shellescape(@%, 1)<CR>
 
 "Run scripts to format or compile programs, autoread is to refresh any changes
 "from the commands
 set autoread
 command F :exec '!~/.vim/u2py/format.py ' . expand("%")
 command B :exec '!~/.vim/u2py/basic.py ' . expand("%")
-
 
