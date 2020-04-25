@@ -28,6 +28,13 @@ NERDCommenter
 NERDTree - File Drawer
 
     git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
+    
+
+
+    
+Vim Polygot - Language Pack
+
+    git clone https://github.com/sheerun/vim-polyglot.git
 
 u2py - Universe Programs hotkeys
     
