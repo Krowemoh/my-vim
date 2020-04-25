@@ -34,7 +34,7 @@ NERDTree - File Drawer
     
 Vim Polygot - Language Pack
 
-    git clone https://github.com/sheerun/vim-polyglot.git
+    git clone https://github.com/sheerun/vim-polyglot.git ~/.vim/bundle/vim-polygot
 
 u2py - Universe Programs hotkeys
     
