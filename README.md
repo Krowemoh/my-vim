@@ -19,15 +19,22 @@ Pathogen
 
     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-NERDCommenter
-    
-    \cc - Comments lines of text
-    git clone https://github.com/preservim/nerdcommenter.git ~/.vim/bundle/nerdcommenter
   
 NERDTree - File Drawer
 
     git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
+    
+YouCompleteMe - Autocompletion
+
+    apt install build-essential cmake vim python3-dev
+    cd ~/.vim/bundle/
+    git clone https://github.com/ycm-core/YouCompleteMe.git
+    python3 install.py --ts-completer
+    
+   
+Vim Polygot - Language Pack
+
+    git clone https://github.com/sheerun/vim-polyglot.git ~/.vim/bundle/vim-polygot
 
 u2py - Universe Programs hotkeys
     
