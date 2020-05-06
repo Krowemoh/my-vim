@@ -1,4 +1,5 @@
 execute pathogen#infect()
+let g:polyglot_disabled = ['cucumber'] 
 syntax on
 set viminfo='20,<1000,s1000
 set wildmenu
@@ -60,3 +61,5 @@ set autoread
 command F :exec '!~/.vim/u2py/format.py ' . expand("%")
 command B :exec '!~/.vim/u2py/basic.py ' . expand("%")
 
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+let g:markdown_fenced_languages = ['javascript', 'js=javascript']
