@@ -1,5 +1,4 @@
 execute pathogen#infect()
-let g:polyglot_disabled = ['cucumber'] 
 syntax on
 set viminfo='20,<1000,s1000
 set wildmenu
@@ -30,13 +29,9 @@ set incsearch
 set ignorecase
 nnoremap <CR> :noh<CR><CR>
 
-"Fold code if it's 10 levels deep
-"set foldenable
-"set foldlevelstart=10
-"set foldmethod=indent
-
 "Start NerdTree by default if not in BP or MPROCLIB
-autocmd vimenter * if (match(getcwd(),"BP") == -1 && match(getcwd(),"MPROCLIB") == -1) | NERDTree | endif
+let s:path = expand('%:p')
+autocmd vimenter * if (stridx(s:path,"notes") == -1 && match(getcwd(),"MPROCLIB") == -1) | NERDTree | endif
 
 "Fcous on opened file instead of NerdTree
 autocmd VimEnter * wincmd p
@@ -47,19 +42,35 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "Add default comments for nerdcommenter
 let g:NERDCustomDelimiters = { 'text': { 'left': '#','right': '' } }
 
-"Anything under BP, and MPROCLIB will be set to use the syntax highlighter
-autocmd BufRead,BufNewFile */BP/* set syntax=unibasic
-autocmd BufRead,BufNewFile */MPROCLIB/* set syntax=unibasic
-autocmd BufRead,BufNewFile */UBP/* set syntax=unibasic
-
-"Python shortcut
-autocmd FileType python map <buffer> <F9> :w<CR>:exec '!uvpython' shellescape(@%, 1)<CR>
-
-"Run scripts to format or compile programs, autoread is to refresh any changes
-"from the commands
-set autoread
-command F :exec '!~/.vim/u2py/format.py ' . expand("%")
-command B :exec '!~/.vim/u2py/basic.py ' . expand("%")
-
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 let g:markdown_fenced_languages = ['javascript', 'js=javascript']
+
+autocmd BufRead,BufNewFile *.md set tw=80
+autocmd BufRead,BufNewFile *.md :Goyo 80
+
+au! BufNewFile,BufRead *.svelte set ft=html
+au BufNewFile,BufRead *.nim set filetype=nim
+au BufNewFile,BufRead Makefile set noet
+
+nnoremap asd :pu! =strftime('%Y-%m-%d %H:%M')<cr>A<space>
+
+function! s:goyo_enter()
+  let b:quitting = 0
+  let b:quitting_bang = 0
+  autocmd QuitPre <buffer> let b:quitting = 1
+  cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
+endfunction
+
+function! s:goyo_leave()
+  " Quit Vim if this is the only remaining buffer
+  if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
+    if b:quitting_bang
+      qa!
+    else
+      qa
+    endif
+  endif
+endfunction
+
+autocmd! User GoyoEnter call <SID>goyo_enter()
+autocmd! User GoyoLeave call <SID>goyo_leave()
