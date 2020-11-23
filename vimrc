@@ -4,8 +4,7 @@ set viminfo='20,<1000,s1000
 set wildmenu
 
 "set mouse=a
-
-set background=dark
+colorscheme seoul256
 
 set number
 
