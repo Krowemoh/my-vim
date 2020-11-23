@@ -5,7 +5,6 @@ set wildmenu
 
 "set mouse=a
 
-colorscheme badwolf
 set background=dark
 
 set number
@@ -53,6 +52,7 @@ au BufNewFile,BufRead *.nim set filetype=nim
 au BufNewFile,BufRead Makefile set noet
 
 nnoremap asd :pu! =strftime('%Y-%m-%d %H:%M')<cr>A<space>
+nnoremap zx :pu! ='=>'<cr>A<space>
 
 function! s:goyo_enter()
   let b:quitting = 0
@@ -74,3 +74,4 @@ endfunction
 
 autocmd! User GoyoEnter call <SID>goyo_enter()
 autocmd! User GoyoLeave call <SID>goyo_leave()
+
