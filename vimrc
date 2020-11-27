@@ -29,7 +29,9 @@ nnoremap <CR> :noh<CR><CR>
 
 "Start NerdTree by default if not in BP or MPROCLIB
 let s:path = expand('%:p')
-autocmd vimenter * if (stridx(s:path,"notes") == -1 && match(getcwd(),"MPROCLIB") == -1) | NERDTree | endif
+let s:filename = expand('%:t')
+let s:filetype = expand('%:e')
+autocmd vimenter * if (match(s:filetype,"md") == -1) | NERDTree | endif
 
 "Fcous on opened file instead of NerdTree
 autocmd VimEnter * wincmd p
