@@ -29,7 +29,9 @@ YouCompleteMe - Autocompletion
     apt install build-essential cmake vim python3-dev
     cd ~/.vim/bundle/
     git clone https://github.com/ycm-core/YouCompleteMe.git
+    git submodule update --init --recursive
     python3 install.py --ts-completer
+    python3 install.py --rust-completer
     
    
 Vim Polygot - Language Pack
