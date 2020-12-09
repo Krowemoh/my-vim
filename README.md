@@ -11,7 +11,7 @@ vimrc is commented.
   
 Add the below to your ~/.vimrc file:
     
-    runtime vimrc
+    echo "runtime vimrc" > ~/.vimrc
     
 ## Packages
 
@@ -35,6 +35,11 @@ YouCompleteMe - Autocompletion
 Vim Polygot - Language Pack
 
     git clone https://github.com/sheerun/vim-polyglot.git ~/.vim/bundle/vim-polygot
+
+Goyo Vim
+
+    git clone https://github.com/junegunn/goyo.vim.git
+
 
 u2py - Universe Programs hotkeys
     
