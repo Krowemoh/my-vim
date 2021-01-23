@@ -45,7 +45,6 @@ let g:NERDCustomDelimiters = { 'text': { 'left': '#','right': '' } }
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 let g:markdown_fenced_languages = ['javascript', 'js=javascript']
 
-autocmd BufRead,BufNewFile *.md set tw=80
 autocmd BufRead,BufNewFile *.md :Goyo 80
 
 au! BufNewFile,BufRead *.svelte set ft=html
@@ -53,7 +52,8 @@ au BufNewFile,BufRead *.nim set filetype=nim
 au BufNewFile,BufRead Makefile set noet
 
 nnoremap asd :pu! =strftime('%Y-%m-%d %H:%M')<cr>A<space>
-nnoremap zx :pu! ='=>'<cr>A<space>
+nnoremap zx :pu! ='==============================\n-> '<cr>A<space>
+set textwidth=0
 
 function! s:goyo_enter()
   let b:quitting = 0
@@ -76,3 +76,4 @@ endfunction
 autocmd! User GoyoEnter call <SID>goyo_enter()
 autocmd! User GoyoLeave call <SID>goyo_leave()
 
+inoremap jj <Esc>
