@@ -42,8 +42,8 @@ Goyo Vim
 
     git clone https://github.com/junegunn/goyo.vim.git
 
-
-u2py - Universe Programs hotkeys
+Installing snippets
     
-    :BP - Compiles programs
-    :FMT - Formats Programs
+    > git clone https://github.com/SirVer/ultisnips.git ~/.vim/bundle/ultisnips
+    :CocInstall coc-snippets
+    :UltiSnipsEdit
