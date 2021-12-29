@@ -31,6 +31,10 @@ Pathogen - vim package manager
 coc.nvim - code completion
 
     git clone https://github.com/neoclide/coc.nvim.git ~/.vim/bundle/coc.nvim
+    cd ~/.vim/bundle/coc.nvim
+    yarn 
+
+Install nvm and use the latest version of node to build coc.
 
 Goyo Vim - clean markdown mode
 
