@@ -23,12 +23,12 @@ Add the below to your ~/.vimrc file:
 
 ## Packages
 
-Pathogen - vim package manager
+### Pathogen - vim package manager
 
     mkdir -p ~/.vim/autoload ~/.vim/bundle && \
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-coc.nvim - code completion
+### coc.nvim - code completion
 
     git clone https://github.com/neoclide/coc.nvim.git ~/.vim/bundle/coc.nvim
     cd ~/.vim/bundle/coc.nvim
@@ -36,23 +36,19 @@ coc.nvim - code completion
 
 Install nvm and use the latest version of node to build coc.
 
-Goyo Vim - clean markdown mode
+### Goyo Vim - clean markdown mode
 
     git clone https://github.com/junegunn/goyo.vim.git ~/.vim/bundle/goyo-vim
 
-NERDTree - file drawer
+### NERDTree - file drawer
 
     git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
 
-Vim Polygot - language pack
+### Vim Polygot - language pack
 
     git clone https://github.com/sheerun/vim-polyglot.git ~/.vim/bundle/vim-polygot
 
-Goyo Vim
-
-    git clone https://github.com/junegunn/goyo.vim.git
-
-Installing snippets
+### Snippets
     
     git clone https://github.com/SirVer/ultisnips.git ~/.vim/bundle/ultisnips
     :CocInstall coc-snippets
