@@ -19,13 +19,8 @@ vimrc is commented.
 
 Add the below to your ~/.vimrc file:
     
-<<<<<<< HEAD
-    runtime vimrc
- 
-=======
     echo "runtime vimrc" > ~/.vimrc
-    
->>>>>>> 41efd448f1db43cfb2cbe8d92cb28d9a3d467301
+
 ## Packages
 
 Pathogen - vim package manager
@@ -49,22 +44,7 @@ NERDTree - file drawer
 
     git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
 
-<<<<<<< HEAD
 Vim Polygot - language pack
-
-    git clone https://github.com/sheerun/vim-polyglot.git ~/.vim/bundle/vim-polygot
-
-
-=======
-    apt install build-essential cmake vim python3-dev
-    cd ~/.vim/bundle/
-    git clone https://github.com/ycm-core/YouCompleteMe.git
-    git submodule update --init --recursive
-    python3 install.py --ts-completer
-    python3 install.py --rust-completer
-    
-   
-Vim Polygot - Language Pack
 
     git clone https://github.com/sheerun/vim-polyglot.git ~/.vim/bundle/vim-polygot
 
@@ -74,7 +54,6 @@ Goyo Vim
 
 Installing snippets
     
-    > git clone https://github.com/SirVer/ultisnips.git ~/.vim/bundle/ultisnips
+    git clone https://github.com/SirVer/ultisnips.git ~/.vim/bundle/ultisnips
     :CocInstall coc-snippets
     :UltiSnipsEdit
->>>>>>> 41efd448f1db43cfb2cbe8d92cb28d9a3d467301
