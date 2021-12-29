@@ -3,8 +3,6 @@ syntax on
 set viminfo='20,<1000,s1000
 set wildmenu
 
-"set mouse=a
-colorscheme seoul256
 colorscheme seoul256
 
 set number
@@ -42,11 +40,6 @@ autocmd BufRead,BufNewFile */MPROCLIB/* set syntax=unibasic
 
 "Focus on opened file instead of NerdTree
 autocmd VimEnter * wincmd p
-
-let g:rustfmt_autosave = 1
-
-"Add default comments for nerdcommenter
-let g:NERDCustomDelimiters = { 'text': { 'left': '#','right': '' } }
 
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 let g:markdown_fenced_languages = ['javascript', 'js=javascript']
