@@ -3,7 +3,13 @@ syntax on
 set viminfo='20,<1000,s1000
 set wildmenu
 
+<<<<<<< HEAD
 colorscheme seoul256
+=======
+"set mouse=a
+colorscheme seoul256
+
+>>>>>>> 41efd448f1db43cfb2cbe8d92cb28d9a3d467301
 
 set number
 
@@ -30,24 +36,30 @@ nnoremap <CR> :noh<CR><CR>
 let s:path = expand('%:p')
 let s:filename = expand('%:t')
 let s:filetype = expand('%:e')
-
+<<<<<<< HEAD
+=======
 autocmd vimenter * if (match(s:filetype,"md") == -1) | NERDTree | endif
 
 "Fcous on opened file instead of NerdTree
 autocmd VimEnter * wincmd p
+>>>>>>> 41efd448f1db43cfb2cbe8d92cb28d9a3d467301
 
 "Close NerdTree when last
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+<<<<<<< HEAD
 autocmd vimenter * if (match(getcwd(),"D_KTS-PROCLIB") == -1 &&match(getcwd(),"BP") == -1 && match(getcwd(),"MPROCLIB") == -1) | NERDTree | endif
 autocmd BufRead,BufNewFile */BP/* set syntax=unibasic
 autocmd BufRead,BufNewFile */MPROCLIB/* set syntax=unibasic
 
 "Focus on opened file instead of NerdTree
 autocmd VimEnter * wincmd p
+=======
+let g:rustfmt_autosave = 1
 
 "Add default comments for nerdcommenter
 let g:NERDCustomDelimiters = { 'text': { 'left': '#','right': '' } }
+>>>>>>> 41efd448f1db43cfb2cbe8d92cb28d9a3d467301
 
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 let g:markdown_fenced_languages = ['javascript', 'js=javascript']
@@ -85,6 +97,10 @@ autocmd! User GoyoLeave call <SID>goyo_leave()
 
 inoremap jj <Esc>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 41efd448f1db43cfb2cbe8d92cb28d9a3d467301
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
@@ -108,7 +124,11 @@ set shortmess+=c
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
+<<<<<<< HEAD
 if has("nvim-0.5.0") || has("patch-8.1.1564")
+=======
+if has("patch-8.1.1564")
+>>>>>>> 41efd448f1db43cfb2cbe8d92cb28d9a3d467301
   " Recently vim can merge signcolumn and number column into one
   set signcolumn=number
 else
@@ -193,9 +213,12 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
+<<<<<<< HEAD
 " Run the Code Lens action on the current line.
 nmap <leader>cl  <Plug>(coc-codelens-action)
 
+=======
+>>>>>>> 41efd448f1db43cfb2cbe8d92cb28d9a3d467301
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
 xmap if <Plug>(coc-funcobj-i)
@@ -229,7 +252,11 @@ command! -nargs=0 Format :call CocAction('format')
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
+<<<<<<< HEAD
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
+=======
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+>>>>>>> 41efd448f1db43cfb2cbe8d92cb28d9a3d467301
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
@@ -253,3 +280,8 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+<<<<<<< HEAD
+=======
+
+autocmd BufNewFile,BufRead *.asm set syntax=gas
+>>>>>>> 41efd448f1db43cfb2cbe8d92cb28d9a3d467301
