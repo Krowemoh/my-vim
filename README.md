@@ -40,10 +40,6 @@ Install nvm and use the latest version of node to build coc.
 
     git clone https://github.com/junegunn/goyo.vim.git ~/.vim/bundle/goyo-vim
 
-### NERDTree - file drawer
-
-    git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
-
 ### Vim Polygot - language pack
 
     git clone https://github.com/sheerun/vim-polyglot.git ~/.vim/bundle/vim-polygot

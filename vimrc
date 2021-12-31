@@ -1,5 +1,9 @@
 execute pathogen#infect()
 syntax on
+
+set visualbell
+set t_vb=
+
 set viminfo='20,<1000,s1000
 set wildmenu
 
@@ -31,23 +35,8 @@ let s:path = expand('%:p')
 let s:filename = expand('%:t')
 let s:filetype = expand('%:e')
 
-autocmd vimenter * if (match(s:filetype,"md") == -1) | NERDTree | endif
-
-"Fcous on opened file instead of NerdTree
-autocmd VimEnter * wincmd p
-
-"Close NerdTree when last
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-autocmd vimenter * if (match(getcwd(),"D_KTS-PROCLIB") == -1 &&match(getcwd(),"BP") == -1 && match(getcwd(),"MPROCLIB") == -1) | NERDTree | endif
 autocmd BufRead,BufNewFile */BP/* set syntax=unibasic
 autocmd BufRead,BufNewFile */MPROCLIB/* set syntax=unibasic
-
-"Focus on opened file instead of NerdTree
-autocmd VimEnter * wincmd p
-
-"Add default comments for nerdcommenter
-let g:NERDCustomDelimiters = { 'text': { 'left': '#','right': '' } }
 
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 let g:markdown_fenced_languages = ['javascript', 'js=javascript']
