@@ -1,14 +1,22 @@
+" Turn on pathogen to load in plugins
 execute pathogen#infect()
+
+" Turn on syntax highlighting
 syntax on
 
+" Turn off the bell sounds
 set visualbell
 set t_vb=
 
 set viminfo='20,<1000,s1000
+
+" Can type a command get a horizontal menu of options
 set wildmenu
 
+" Colorscheme
 colorscheme seoul256
 
+" Turn on line numbers
 set number
 
 "Tabs are set to 4 spaces
@@ -30,26 +38,19 @@ set incsearch
 set ignorecase
 nnoremap <CR> :noh<CR><CR>
 
-"Start NerdTree by default if not in BP or MPROCLIB
-let s:path = expand('%:p')
-let s:filename = expand('%:t')
-let s:filetype = expand('%:e')
+" Shortcut to print out the date
+nnoremap asd :pu! =strftime('%Y-%m-%d')<cr>A<space>
 
+" Set syntax highlighting for BASIC  files
 autocmd BufRead,BufNewFile */BP/* set syntax=unibasic
 autocmd BufRead,BufNewFile */MPROCLIB/* set syntax=unibasic
 
-autocmd BufNewFile,BufRead *.md set filetype=markdown
-let g:markdown_fenced_languages = ['javascript', 'js=javascript']
+" Formatting for Makefiles so that indents don't screw up
+au BufNewFile,BufRead Makefile set noexpandtab
 
+" Goyo settings for distraction free writing
+" Set Goyo to be 80 characters wide
 autocmd BufRead,BufNewFile *.md :Goyo 80
-
-au! BufNewFile,BufRead *.svelte set ft=html
-au BufNewFile,BufRead *.nim set filetype=nim
-au BufNewFile,BufRead Makefile set noet
-
-nnoremap asd :pu! =strftime('%Y-%m-%d %H:%M')<cr>A<space>
-nnoremap zx :pu! ='==============================\n-> '<cr>A<space>
-set textwidth=0
 
 function! s:goyo_enter()
   let b:quitting = 0
@@ -72,7 +73,7 @@ endfunction
 autocmd! User GoyoEnter call <SID>goyo_enter()
 autocmd! User GoyoLeave call <SID>goyo_leave()
 
-inoremap jj <Esc>
+" CoC settings - Taken directly from https://github.com/neoclide/coc.nvim
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim

@@ -19,7 +19,7 @@ vimrc is commented.
 
 Add the below to your ~/.vimrc file:
     
-    echo "runtime vimrc" > ~/.vimrc
+    runtime vimrc
 
 ## Packages
 
