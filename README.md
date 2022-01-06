@@ -8,6 +8,7 @@ vimrc is commented.
 
     git clone https://github.com/vim/vim.git
     cd vim
+    ./configure --enable-python3interp --with-python3-config-dir=/usr/bin/python3
     make
     sudo make install
 
