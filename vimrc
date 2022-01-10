@@ -51,6 +51,7 @@ au BufNewFile,BufRead Makefile set noexpandtab
 " Goyo settings for distraction free writing
 " Set Goyo to be 80 characters wide
 autocmd BufRead,BufNewFile *.md :Goyo 80
+autocmd BufRead,BufNewFile *.md :set spell spelllang=en_us
 
 function! s:goyo_enter()
   let b:quitting = 0
