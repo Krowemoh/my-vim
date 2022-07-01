@@ -1,0 +1,969 @@
+snippet ABORT "Use the ABORT statement to terminate execution of a BASIC program and return to the UniVerse prompt." b
+ABORT [expression …]
+endsnippet
+snippet ABS "Use the ABS function to return the absolute value of any numeric expression." b
+ABS(expression)
+endsnippet
+snippet ABSS "Use the ABSS function to return the absolute values of all the elements in a dynamic array." b
+ABSS(dynamic.array)
+endsnippet
+snippet ACOS "Use the ACOS function to return the trigonometric arc-cosine of expression." b
+ACOS(expression)
+endsnippet
+snippet ACTIVATEKEY "Use the ACTIVATEKEY statement to activate a key." b
+ACTIVATEKEY <key.id>, <password> [ON <hostname>]
+endsnippet
+snippet ADDS "Use the ADDS function to create a dynamic array of the element-by-element addition of two dynamic arrays." b
+ADDS(array1, array2)
+endsnippet
+snippet ALPHA "Use the ALPHA function to determine whether expression is an alphabetic or non-alphabetic string." b
+ALPHA(expression)
+endsnippet
+snippet ANDS "Use the ANDS function to create a dynamic array of the logical AND of corresponding elements of two dynamic arrays." b
+ANDS(array1, array2)
+endsnippet
+snippet ASCII "Use the ASCII function to convert each character of expression from its EBCDIC representation value to its ASCII representation value." b
+ASCII(expression)
+endsnippet
+snippet ASIN "Use the ASIN function to return the trigonometric arc-sine of expression." b
+ASIN(expression)
+endsnippet
+snippet ASSIGNED "Use the ASSIGNED function to determine if variable is assigned a value." b
+ASSIGNED(variable)
+endsnippet
+snippet ATAN "Use the ATAN function to return the trigonometric arc-tangent of expression." b
+ATAN(expression)
+endsnippet
+snippet AUTHORIZATION "Use the AUTHORIZATION statement to specify or change the effective runtime user of a program." b
+AUTHORIZATION "username"
+endsnippet
+snippet AUXMAP "In NLS mode, use the AUXMAP statement to associate an auxiliary device with a terminal." b
+AUXMAP { ON | OFF | expression }
+endsnippet
+snippet BITAND "Use the BITAND function to perform the bitwise AND comparison of two integers specified by numeric expressions." b
+BITAND(expression1, expression2)
+endsnippet
+snippet BITNOT "Use the BITNOT function to return the bitwise negation of an integer specified by any numeric expression." b
+BITNOT(expression [,bit#])
+endsnippet
+snippet BITOR "Use the BITOR function to perform the bitwise OR comparison of two integers specified by numeric expressions." b
+BITOR(expression1, expression2)
+endsnippet
+snippet BITRESET "Use the BITRESET function to reset to 0 the bit number of the integer specified by expression." b
+BITRESET(expression, bit#)
+endsnippet
+snippet BITSET "Use the BITSET function to set to 1 the bit number of the integer specified by expression." b
+BITSET(expression, bit#)
+endsnippet
+snippet BITTEST "Use the BITTEST function to test the bit number of the integer specified by expression." b
+BITTEST(expression, bit#)
+endsnippet
+snippet BITXOR "Use the BITXOR function to perform the bitwise XOR comparison of two integers specified by numeric expressions." b
+BITXOR(expression1, expression2)
+endsnippet
+snippet BREAK "Use the BREAK statement to enable or disable the Intr, Quit, and Susp keys on the keyboard." b
+BREAK [KEY] { ON | OFF | expression }
+endsnippet
+snippet BSCAN "Use the BSCAN statement to scan the leaf nodes of a B-tree file (type 25) or of a secondary index." b
+BSCAN ID.variable [, rec.variable] [FROM file.variable [, record]]
+endsnippet
+snippet BYTE "In NLS mode, use the BYTE function to generate a byte from the numeric value of expression." b
+BYTE(expression)
+endsnippet
+snippet BYTELEN "In NLS mode, use the BYTELEN function to generate the number of bytes contained in the ASCII string value in expression." b
+BYTELEN(expression)
+endsnippet
+snippet BYTETYPE "In NLS mode, use the BYTETYPE function to determine the function of a byte in value." b
+BYTETYPE(value)
+endsnippet
+snippet BYTEVAL "In NLS mode, use the BYTEVAL function to examine the bytes contained in the internal string value of expression." b
+BYTEVAL(expression [, n] )
+endsnippet
+snippet CALL "Use the CALL statement to transfer program control from the calling program to an external subroutine or program that has been compiled and cataloged." b
+CALL name [([MAT] argument [, [MAT] argument …])]
+endsnippet
+snippet CASE "Use the CASE statement to alter the sequence of instruction execution based on the value of one or more expressions." b
+BEGIN CASE
+endsnippet
+snippet CATS "Use the CATS function to create a dynamic array of the element-by-element concatenation of two dynamic arrays." b
+CATS(array1, array2)
+endsnippet
+snippet CHAIN "Use the CHAIN statement to terminate execution of a UniVerse BASIC program and to execute the value of command." b
+CHAIN command
+endsnippet
+snippet CHANGE "Use the CHANGE function to replace a substring in expression with another substring." b
+CHANGE(expression, substring, replacement [,occurrence [,begin]] )
+endsnippet
+snippet CHAR "Use the CHAR function to generate an ASCII character from the numeric value of expression." b
+CHAR(expression)
+endsnippet
+snippet CHARS "Use the CHARS function to generate a dynamic array of ASCII characters from the decimal numeric value of each element of dynamic." b
+CHARS(dynamic.array)
+endsnippet
+snippet CHECKSUM "Use the CHECKSUM function to return a cyclical redundancy code (a checksum value)." b
+CHECKSUM(string)
+endsnippet
+snippet CLEAR "Use the CLEAR statement at the beginning of a program to set all assigned and unassigned values of variables outside of the common area of the program to 0." b
+CLEAR [COMMON]
+endsnippet
+snippet CLEARDATA "Use the CLEARDATA statement to flush all data that has been loaded in the input stack by the DATA statement." b
+CLEARDATA
+endsnippet
+snippet CLEARFILE "Use the CLEARFILE statement to delete all records in an open dictionary or data file." b
+CLEARFILE [file.variable] [ON ERROR statements] [LOCKED statements]
+endsnippet
+snippet CLEARPROMPTS "Use the CLEARPROMPTS statement to clear the value of the inline prompt." b
+CLEARPROMPTS
+endsnippet
+snippet CLEARSELECT "Use the CLEARSELECT statement to clear an active select list." b
+CLEARSELECT [ALL | list.number]
+endsnippet
+snippet CLOSE "Use the CLOSE statement after opening and processing a file." b
+CLOSE [file.variable] [ON ERROR statements]
+endsnippet
+snippet CLOSESEQ "Use the CLOSESEQ statement after opening and processing a file opened for sequential processing." b
+CLOSESEQ file.variable [ON ERROR statements]
+endsnippet
+snippet COMMIT "Use the COMMIT statement to commit all file I/O changes made during a transaction." b
+COMMIT [WORK] [THEN statements] [ELSE statements ]
+endsnippet
+snippet COMMON "Use the COMMON statement to provide a storage area for variables." b
+COM[MON] [/name/] variable [,variable …]
+endsnippet
+snippet COMPARE "Use the COMPARE function to compare two strings and return a numeric value indicating the result." b
+COMPARE(string1, string2 [, justification])
+endsnippet
+snippet CONVERT "Use the CONVERT statement to replace every occurrence of specific characters in a string with other characters." b
+CONVERT expression1 TO expression2 IN variable
+endsnippet
+snippet COS "Use the COS function to return the trigonometric cosine of an angle." b
+COS(expression)
+endsnippet
+snippet COSH "Use the COSH function to return the hyperbolic cosine of expression." b
+COSH(expression)
+endsnippet
+snippet COUNT "Use the COUNT function to return the number of times a substring is repeated in a string value." b
+COUNT(string, substring)
+endsnippet
+snippet COUNTS "Use the COUNTS function to count the number of times a substring is repeated in each element of a dynamic array." b
+COUNTS(dynamic.array, substring)
+endsnippet
+snippet CREATE "Use the CREATE statement after an OPENSEQ statement to create a record in a type 1 or type statement fails." b
+CREATE file.variable {THEN statements [ELSE statements] | ELSE
+endsnippet
+snippet CRT "Use the CRT statement to print data on the screen, regardless of whether a PRINTER ON statement has been executed." b
+CRT [print.list]
+endsnippet
+snippet DATA "Use the DATA statement to place values in an input stack." b
+DATA expression [,expression …]
+endsnippet
+snippet DATE "Use the DATE function to return the numeric value of the internal system date." b
+DATE()
+endsnippet
+snippet DBTOXML "To create an XML document from the UniVerse database using UniVerse BASIC, use the DBTOXML function." b
+DBTOXML(xml_document, doc_location, u2xmap_file, u2xmap_location,
+endsnippet
+snippet DCOUNT "Use the DCOUNT function to return the number of delimited fields in a data string." b
+DCOUNT(string, delimiter)
+endsnippet
+snippet DEACTIVATEKEY "Use the DEACTIVATEKEY command to deactivate one or more encryption keys." b
+DEACTIVATEKEY <key.id>, <password> [ON <hostname>]
+endsnippet
+snippet DEBUG "Use the DEBUG statement to invoke RAID, the interactive UniVerse BASIC debugger." b
+DEBUG
+endsnippet
+snippet DEFFUN "Use the DEFFUN statement to define a user-written function." b
+DEFFUN function [([MAT] argument [, [MAT] argument …] )] [CALLING
+endsnippet
+snippet DEL "Use the DEL statement to delete a field, value, or subvalue from a dynamic array." b
+DEL dynamic.array < field# [,value# [,subvalue#]] >
+endsnippet
+snippet DELETE "Use the DELETE statements to delete a record from a UniVerse file." b
+DELETE [file.variable ,] record.ID [ON ERROR statements] [LOCKED
+endsnippet
+snippet DELETELIST "Use the DELETELIST statement to delete a select list saved in the &SAVEDLISTS& file." b
+DELETELIST listname
+endsnippet
+snippet DESCRINFO "The DESCRINFO function returns requested information (key) about a variable." b
+DESCRINFO(key, variable)
+endsnippet
+snippet DIGEST "The DIGEST() function generates a message digest of supplied data." b
+DIGEST(algorithm, data, dataLoc, result)
+endsnippet
+snippet DIMENSION "Use the DIMENSION statement to define the dimensions of an array variable before referencing the array in the program." b
+DIM[ENSION] matrix(rows, columns) [, matrix(rows, columns) …]
+endsnippet
+snippet DISABLEDEC "Use the DISABLEDEC command to turn off decryption on a field or fields you specify." b
+DISABLEDEC <filename> [, <multilevel-filename>], {ALL |<field_list>}
+endsnippet
+snippet DISPLAY "Use the DISPLAY statement to print data on the screen, regardless of whether a PRINTER ON statement has been executed." b
+DISPLAY [print.list]
+endsnippet
+snippet DIV "Use the DIV function to calculate the value of the quotient after dividend is divided by divisor." b
+DIV(dividend, divisor)
+endsnippet
+snippet DIVS "Use the DIVS function to create a dynamic array containing the result of the element-by-element division of two dynamic arrays." b
+DIVS(array1, array2)
+endsnippet
+snippet DOWNCASE "Use the DOWNCASE function to change all uppercase letters in expression to lowercase." b
+DOWNCASE(expression)
+endsnippet
+snippet DQUOTE "Use the DQUOTE function to enclose an expression in double quotation marks." b
+DQUOTE(expression)
+endsnippet
+snippet DTX "Use the DTX function to convert a decimal integer to its hexadecimal equivalent." b
+DTX(number [,size] )
+endsnippet
+snippet EBCDIC "Use the EBCDIC function to convert each character of expression from its ASCII representation value to its EBCDIC representation value." b
+EBCDIC(expression)
+endsnippet
+snippet ECHO "Use the ECHO statement to control the display of input characters on the screen." b
+ECHO {ON | OFF | expression}
+endsnippet
+snippet ENABLEDEC "Use the ENABLEDEC command to activate decryption on a file or fields you specify." b
+ENABLEDEC <filename> [, <multilevel-filename>], { ALL |<field_list>}
+endsnippet
+snippet ENCODE "The ENCODE() function performs data encoding on input data." b
+ENCODE(algorithm, action, data, dataLoc, result, resultLoc)
+endsnippet
+snippet ENCRYPT "The ENCRYPT() function performs symmetric encryption operations." b
+ENCRYPT(algorithm, action, data, dataLoc,key, keyLoc, keyAction, salt,
+endsnippet
+snippet END "Use the END statement to terminate a BASIC program or a section of an IF statement, READ statement, or OPEN statement." b
+END
+endsnippet
+snippet ENTER "Use the ENTER statement to transfer program control from the calling program to an external subroutine without returning to the calling program." b
+ENTER subroutine
+endsnippet
+snippet EQS "Use the EQS function to test if elements of one dynamic array are equal to the elements of another dynamic array." b
+EQS(array1, array2)
+endsnippet
+snippet EQUATE "In an EQUATE statement, symbol represents the value of expression or string." b
+EQU[ATE] symbol TO expression [,symbol TO expression …]
+endsnippet
+snippet EREPLACE "Use the EREPLACE function to replace substring in expression with another substring." b
+EREPLACE(expression, substring, replacement [,occurrence [,begin]] )
+endsnippet
+snippet ERRMSG "Use the ERRMSG statement to print a formatted error message from the ERRMSG file." b
+ERRMSG message.ID [,message.ID …]
+endsnippet
+snippet EXCHANGE "Use the EXCHANGE function to replace one character with another or to delete all occurrences of the specified character." b
+EXCHANGE(string, xx, yy)
+endsnippet
+snippet EXECUTE "Use the EXECUTE statement to execute UniVerse commands from within the BASIC program and then return execution to the statement following the EXECUTE statement." b
+EXECUTE $1 CAPTURING RESULTS 
+endsnippet
+snippet EXIT "Use the EXIT statement to quit execution of a FOR." b
+EXIT
+endsnippet
+snippet EXP "Use the EXP function to return the value of e raised to the power designated by expression." b
+EXP(expression)
+endsnippet
+snippet EXTRACT "Use the EXTRACT function to access the data contents of a specified field, value, or subvalue from a dynamic array." b
+EXTRACT(dynamic.array, field#[,value# [,subvalue#]] )
+endsnippet
+snippet FADD "Use the FADD function to perform floating-point addition on two numeric values." b
+CALL !FADD(return.array, number1, number2)
+endsnippet
+snippet FDIV "Use the FDIV function to perform floating-point division on two numeric values." b
+FDIV(number1, number2)
+endsnippet
+snippet FFIX "Use the FFIX function to convert a floating-point number to a numeric string with fixed precision." b
+FFIX(number)
+endsnippet
+snippet FFLT "Use the FFLT function to round a number to a string with a precision of 13." b
+FFLT(number)
+endsnippet
+snippet FIELD "Use the FIELD function to return one or more substrings located between specified delimiters in string." b
+FIELD(string, delimiter, occurrence [,num.substr] )
+endsnippet
+snippet FIELDS "Use the FIELDS function to return a dynamic array of substrings located between specified delimiters in each element of dynamic." b
+FIELDS(dynamic.array, delimiter, occurrence [ ,num.substr] )
+endsnippet
+snippet FIELDSTORE "Use the FIELDSTORE function to modify character strings by inserting, deleting, or replacing fields separated by specified delimiters." b
+FIELDSTORE(string, delimiter, start, n, new.string)
+endsnippet
+snippet FIELDWRITE "The FIELDWRITE statement allows you to update the specified fields in an existing record and releases locks set by the same process." b
+FIELDWRITE[U] expression {ON | TO} [file.variable,] record.ID,
+endsnippet
+snippet FILEINFO "Use the FILEINFO function to return information about the specified file’s configuration, such as the specified file’s parameters, its modulus and load, its operating system file name, and its VOC name." b
+FILEINFO(file.variable , key )
+endsnippet
+snippet FILELOCK "Use the FILELOCK statement to acquire a lock on an entire file." b
+FILELOCK [file.variable] [, lock.type] [ON ERROR statements] [LOCKED
+endsnippet
+snippet FILEUNLOCK "Use the FILEUNLOCK statement to release a file lock set by the FILELOCK statement." b
+FILEUNLOCK [file.variable] [ON ERROR statements]
+endsnippet
+snippet FIND "Use the FIND statement to locate an element in dynamic." b
+FINDelement IN dynamic.array [,occurrence] SETTING fmc [,vmc [,smc]]
+endsnippet
+snippet FINDSTR "Use the FINDSTR statement to locate substring in dynamic." b
+FINDSTRsubstring IN dynamic.array [,occurrence] SETTING fmc [,vmc
+endsnippet
+snippet FIX "Use the FIX function to convert a numeric value to a floating-point number with a specified precision." b
+FIX(number [,precision [,mode]] )
+endsnippet
+snippet FLUSH "The FLUSH statement causes all the buffers for a sequential I/O file to be written immediately." b
+FLUSH file.variable {THEN statements [ELSE statements] | ELSE
+endsnippet
+snippet FMT "Use the FMT function or a format expression to format data for output." b
+FMT(expression, format)expressionformat
+endsnippet
+snippet FMTDP "In NLS mode, use the FMTDP function to format data for output in display positions rather than character lengths." b
+FMTDP(expression, format [, mapname ] )
+endsnippet
+snippet FMTS "Use the FMTS function to format elements of dynamic." b
+FMTS(dynamic.array, format)
+endsnippet
+snippet FMTSDP "In NLS mode, use the FMTSDP function to format elements of dynamic." b
+FMTSDP(dynamic.array, format [, mapname] )
+endsnippet
+snippet FMUL "Use the FMUL function to perform floating-point multiplication on two numeric values." b
+FMUL(number1, number2)
+endsnippet
+snippet FOLD "Use the FOLD function to divide a string into a number of substrings separated by field marks." b
+FOLD(string, length )
+endsnippet
+snippet FOLDDP "In NLS mode, use the FOLDDP function to divide a string into a number of substrings separated by field marks." b
+FOLDDP(string, length [, mapname ] )
+endsnippet
+snippet FOOTING "Use the FOOTING statement to specify the text and format of the footing to print at the bottom of each page of output." b
+FOOTING [ON print.channel] footing
+endsnippet
+snippet FOR "Use the FOR statement to create a FOR…NEXT program loop." b
+FOR I = 1 TO DCOUNT($1,@VM)
+NEXT I
+endsnippet
+snippet FORMLIST "The FORMLIST statement is the same as the SELECT statements." b
+FORMLIST $1
+endsnippet
+snippet FSUB "Use the FSUB function to perform floating-point subtraction on two numeric values." b
+FSUB($1, )
+endsnippet
+snippet FUNCTION "Use the FUNCTION statement to identify a user-written function and to specify the number and names of the arguments to be passed to it." b
+FUNCTION [name] [( [MAT] variable [, [MAT] variable …] )]
+endsnippet
+snippet GES "Use the GES function to test if elements of one dynamic array are greater than or equal to corresponding elements of another dynamic array." b
+GES(array1, array2)
+endsnippet
+snippet GET "Use GET statements to read a block of data from an input stream associated with a device, such as a serial line or terminal." b
+GET[X]read.var[, length] [SETTING read.count] FROM device [UNTIL
+endsnippet
+snippet GETX "Use the GETX statement to read a block of data from an input stream and return the characters in ASCII hexadecimal format." b
+GET(ARG. [,arg#] ) variable [THEN statements] [ELSE statements]
+endsnippet
+snippet GETLIST "Use the GETLIST statement to activate a saved select list so that a READNEXT statement can use it." b
+GETLIST listname [IN start, end] [TO list.number] [SETTING variable]
+endsnippet
+snippet GETLOCALE "In NLS mode use the GETLOCALE function to return the names of specified categories of the current locale." b
+GETLOCALE(category)
+endsnippet
+snippet GETREM "Use the GETREM function after the execution of a REMOVE statement, a REMOVE function, or a REVREMOVE statement, to return the numeric value for the character position of the pointer associated with dynamic." b
+GETREM(dynamic.array)
+endsnippet
+snippet GOSUB "Use the GOSUB statement to transfer program control to an internal subroutine referenced by statement." b
+GOSUB statement.label [:]
+endsnippet
+snippet GOTO "Use the GOTO statement to transfer program control to the statement specified by statement." b
+GO[TO] statement.label [:]
+endsnippet
+snippet GROUP "Use the GROUP function to return one or more substrings located between specified delimiters in string." b
+GROUP(string, delimiter, occurrence [,num.substr] )
+endsnippet
+snippet GROUPSTORE "Use the GROUPSTORE statement to modify character strings by inserting, deleting, or replacing fields separated by specified delimiters." b
+GROUPSTORE new.string IN string USING start, n [ ,delimiter]
+endsnippet
+snippet GTS "Use the GTS function to test if elements of one dynamic array are greater than elements of another dynamic array." b
+GTS(array1, array2)
+endsnippet
+snippet HEADING "Use the HEADING statement to specify the text and format of the heading to print at the top of each page of output." b
+HEADING [ON print.channel] heading
+endsnippet
+snippet HMAC "HMAC (keyed-Hash Message Authentication Code) is a specific construction for calculating a message authentication code (MAC) involving a cryptographic hash function in combination with a secret key." b
+hmac= HMAC(hmacAlg, hmacKey, hmacData, [outFormat])
+endsnippet
+snippet HUSH "Use the HUSH statement to suppress the display of all output normally sent to a terminal during processing." b
+HUSH { ON | OFF | expression} [SETTING status ]
+endsnippet
+snippet ICHECK "Use the ICHECK function to check if data you intend to write to an SQL table violates any SQL integrity constraints." b
+ICHECK(dynamic.array [, file.variable] , key [, column#] )
+endsnippet
+snippet ICONV "Use the ICONV function to convert string to a specified internal storage format." b
+ICONV($1, "")
+endsnippet
+snippet ICONVS "Use the ICONVS function to convert each element of dynamic." b
+ICONVS($1, "")
+endsnippet
+snippet IF "Use the IF statement to determine program flow based on the evaluation of expression." b
+IF $1 THEN
+END
+endsnippet
+snippet IFS "Use the IFS function to return a dynamic array whose elements are chosen individually from one of two dynamic arrays based on the contents of a third dynamic array." b
+IFS(dynamic.array, true.array, false.array)
+endsnippet
+snippet ILPROMPT "Use the ILPROMPT function to evaluate a string containing UniVerse in-line prompts." b
+ILPROMPT(in.line.prompt)
+endsnippet
+snippet INCLUDE "Use the INCLUDE statement to direct the compiler to insert the source code in the record program and compile it along with the main program." b
+INCLUDE [filename] program
+endsnippet
+snippet INDEX "Use the INDEX function to return the starting character position for the specified occurrence of substring in string." b
+INDEX(string, substring, occurrence)
+endsnippet
+snippet INDEXS "Use the INDEXS function to return a dynamic array of the starting column positions for a specified occurrence of a substring in each element of dynamic." b
+INDEXS(dynamic.array, substring, occurrence)
+endsnippet
+snippet INDICES "Use the INDICES function to return information about the secondary key indexes in a file." b
+INDICES(file.variable [,indexname])
+endsnippet
+snippet INMAT "Use the INMAT function to return the number of array elements that have been loaded after the execution of MATREAD statements, MATREADL statement, MATREADU statement, or MATPARSE statement, or to return the modulo of a file after the execution of an OPEN statement." b
+INMAT([array] )
+endsnippet
+snippet INPUT "Use the INPUT statement to halt program execution and prompt the user to enter a response." b
+INPUT variable [,length] [:] [_] [{WAITING} time.expr]
+endsnippet
+snippet INPUTCLEAR "Use the INPUTCLEAR statement to clear the type-ahead buffer." b
+INPUTCLEAR
+endsnippet
+snippet INPUTDISP "Use the INPUTDISP statement with an @ expression to position the cursor at a specified location and define a format for the variable to print." b
+INPUTDISP [@(col, row) [, | :]] variable [format]
+endsnippet
+snippet INPUTDP "In NLS mode, use the INPUTDP statement to let the user enter data." b
+INPUTDP variable [, length] [:] [_] [THEN statements] [ELSE statements]
+endsnippet
+snippet INPUTERR "Use the INPUTERR statement to print a formatted error message on the bottom line of the terminal." b
+INPUTERR [error.message]
+endsnippet
+snippet INPUTNULL "Use the INPUTNULL statement to define a character to be recognized as an empty string when it is input in response to an INPUT statement." b
+INPUTNULL character
+endsnippet
+snippet INPUTTRAP "Use the INPUTTRAP statement to branch to a program label or subroutine when a trap character is input." b
+INPUTTRAP [trap.chars] {GOTO | GOSUB} label [ ,label …]
+endsnippet
+snippet INS "Use the INS statement to insert a new field, value, or subvalue into the specified dynamic." b
+INS expression BEFORE dynamic.array < field# [,value# [ ,subvalue#]] >
+endsnippet
+snippet INSERT "Use the INSERT function to return a dynamic array that has a new field, value, or subvalue inserted into the specified dynamic array." b
+INSERT(dynamic.array, field#, value#, subvalue#, expression)
+endsnippet
+snippet INT "Use the INT function to return the integer portion of an expression." b
+INT(expression)
+endsnippet
+snippet ISNULL "Use the ISNULL function to test whether a variable is the null value." b
+ISNULL(variable)
+endsnippet
+snippet ISNULLS "Use the ISNULLS function to test whether any element of dynamic." b
+ISNULLS(dynamic.array)
+endsnippet
+snippet ITYPE "The ITYPE function leverages the object code stored within a compiled i." b
+ITYPE(item)
+endsnippet
+snippet KEYEDIT "Use the KEYEDIT statement to assign specific keyboard keys to the editing functions of the INPUT @ statement, and to the !EDIT." b
+KEYEDIT(function, key) [,(function, key)] …
+endsnippet
+snippet KEYEXIT "Use the KEYEXIT statement to specify exit traps for the keys assigned specific functions by the KEYEDIT statement." b
+KEYEXIT(value, key) [,(value, key)] …
+endsnippet
+snippet KEYIN "Use the KEYIN function to read a single character from the input buffer and return it." b
+KEYIN()
+endsnippet
+snippet KEYTRAP "Use the KEYTRAP statement to specify traps for the keys assigned specific functions by the KEYEDIT statement." b
+KEYTRAP(value, key) [,(value, key)] …
+endsnippet
+snippet LEFT "Use the LEFT function to extract a substring comprising the first n characters of a string, without specifying the starting character position." b
+LEFT(string, n)
+endsnippet
+snippet LEN "Use the LEN function to return the number of characters in string." b
+LEN(string)
+endsnippet
+snippet LENDP "In NLS mode, use the LENDP function to return the number of display positions occupied by string when using the specified map." b
+LENDP(string [,mapname] )
+endsnippet
+snippet LENS "Use the LENS function to return a dynamic array of the number of display positions in each element of dynamic." b
+LENS(dynamic.array)
+endsnippet
+snippet LENSDP "In NLS mode, use the LENSDP function to return a dynamic array of the number of display positions occupied by each element of dynamic." b
+LENSDP(dynamic.array [, mapname] )
+endsnippet
+snippet LES "Use the LES function to test if elements of one dynamic array are less than or equal to the elements of another dynamic array." b
+LES(array1, array2)
+endsnippet
+snippet LET "Use the LET statement to assign the value of expression to variable." b
+[LET] variable = expression
+endsnippet
+snippet LN "Use the LN function to calculate the natural logarithm of the value of an expression, using base e." b
+LN(expression)
+endsnippet
+snippet LOCALEINFO "In NLS mode, use the LOCALEINFO function to retrieve the settings of the current locale." b
+LOCALEINFO(category)
+endsnippet
+snippet LOCK "Use the LOCK statement to protect specified user-defined resources or events against unauthorized use or simultaneous data file access by different users." b
+LOCK expression [THEN statements] [ELSE statements]
+endsnippet
+snippet LOOP "Use the LOOP statement to start a LOOP…REPEAT program loop." b
+LOOP
+    READNEXT $1 ELSE $1 = ''
+UNTIL $1 = '' DO
+REPEAT
+endsnippet
+snippet LOWER "Use the LOWER function to return a value equal to expression, except that system delimiters which appear in expression are converted to the next lower-level delimiter: field marks are changed to value marks, value marks are changed to subvalue marks, and so on." b
+LOWER($1)
+endsnippet
+snippet LTS "Use the LTS function to test if elements of one dynamic array are less than elements of another dynamic array." b
+LTS(array1, array2)
+endsnippet
+snippet MAT "Use the MAT statement to assign one value to all of the elements in the array or to assign all the values of one array to the values of another array." b
+MAT $1 = ''
+endsnippet
+snippet MATBUILD "Use the MATBUILD statement to build a dynamic array from a dimensioned array." b
+MATBUILD dynamic.array FROM array [,start [,end]] [USING delimiter]
+endsnippet
+snippet MATCHFIELD "Use the MATCHFIELD function to check a string against a match pattern." b
+MATCHFIELD(string, pattern, field)
+endsnippet
+snippet MATPARSE "Use the MATPARSE statement to separate the fields of dynamic." b
+MATPARSE array FROM dynamic.array [,delimiter]
+endsnippet
+snippet MATREAD "Use the MATREAD statement to assign the contents of the fields of a record from a UniVerse file to consecutive elements of array." b
+MATREAD $1 FROM .FILE, .ID ELSE MAT $1 = ''
+endsnippet
+snippet MATWRITE "Use the MATWRITE statement to write data from the elements of a dimensioned array to a record in a UniVerse file." b
+MATWRITE $1.ITEM ON $1.FILE,$1.ID
+endsnippet
+snippet MAXIMUM "Use the MAXIMUM function to return the element with the highest numeric value in dynamic." b
+MAXIMUM(dynamic.array)
+endsnippet
+snippet MINIMUM "Use the MINIMUM function to return the element with the lowest numeric value in dynamic." b
+MINIMUM(dynamic.array)
+endsnippet
+snippet MOD "Use the MOD function to calculate the value of the remainder after integer division is performed on the dividend expression by the divisor expression." b
+MOD(dividend, divisor)
+endsnippet
+snippet MODS "Use the MODS function to create a dynamic array of the remainder after the integer division of corresponding elements of two dynamic arrays." b
+MODS(array1, array2)
+endsnippet
+snippet MQCLOSE "Use the MQCLOSE() function to close access to a queue or other object." b
+status=MQCLOSE(hConn, hObj, options)
+endsnippet
+snippet MQCONN "The MQCONN() function connects an application to a WebSphere MQ queue manager." b
+status=MQCONN(qManager, hConn)
+endsnippet
+snippet MQDISC "The MQDISC function terminates connections to the queue manager that were create using the MQCONN function." b
+status=MQDISC(hConn)
+endsnippet
+snippet MULS "Use the MULS function to create a dynamic array of the element-by-element multiplication of two dynamic arrays." b
+MULS(array1, array2)
+endsnippet
+snippet NAP "Use the NAP statement to suspend the execution of a BASIC program, pausing for a specified number of milliseconds." b
+NAP [milliseconds]
+endsnippet
+snippet NEG "Use the NEG function to return the arithmetic inverse of the value of the argument." b
+NEG(number)
+endsnippet
+snippet NEGS "Use the NEGS function to return the negative values of all the elements in a dynamic array." b
+NEGS(dynamic.array)
+endsnippet
+snippet NES "Use the NES function to test if elements of one dynamic array are equal to the elements of another dynamic array." b
+NES(array1, array2)
+endsnippet
+snippet NEXT "Use the NEXT statement to end a FOR…NEXT loop, causing the program to branch back to the FOR statement and execute the statements that follow it." b
+NEXT [variable]
+endsnippet
+snippet NOBUF "Use the NOBUF statement to turn off buffering for a file previously opened for sequential processing." b
+NOBUF file.variable {THEN statements [ELSE statements] | ELSE
+endsnippet
+snippet NOT "Use the NOT function to return the logical complement of the value of expression." b
+NOT(expression)
+endsnippet
+snippet NOTS "Use the NOTS function to return a dynamic array of the logical complements of each element of dynamic." b
+NOTS(dynamic.array)
+endsnippet
+snippet NULL "Use the NULL statement when a statement is required but no operation is to be performed." b
+NULL
+endsnippet
+snippet NUM "Use the NUM function to determine whether expression is a numeric or nonnumeric string." b
+NUM(expression)
+endsnippet
+snippet NUMS "Use the NUMS function to determine whether the elements of a dynamic array are numeric or nonnumeric strings." b
+NUMS(dynamic.array)
+endsnippet
+snippet OCONV "Use the OCONV function to convert string to a specified format for external output." b
+OCONV($1, '')
+endsnippet
+snippet OCONVS "Use the OCONVS function to convert the elements of dynamic." b
+OCONVS(dynamic.array, conversion)
+endsnippet
+snippet ON "Use the ON statement to transfer program control to one of the internal subroutines named in the GOSUB clause or to one of the statements named in the GOTO clause." b
+ON expression GOSUB statement.label [:] [,statement.label [:]… ]
+endsnippet
+snippet OPEN "Use the OPEN statement to open a UniVerse file for use by BASIC programs." b
+    OPEN '','$1' TO .FILE ELSE
+        PRINT 'Unable to open file: $1 - Press RETURN':
+        INPUT ANYTHING
+        STOP
+    END
+endsnippet
+snippet OPENCHECK "Use the OPENCHECK statement to open an SQL table for use by BASIC programs, enforcing SQL integrity checking." b
+OPENCHECK [dict,] filename [TO file.variable] {THEN statements [ELSE
+endsnippet
+snippet OPENDEV "Use the OPENDEV statement to open a device for sequential processing." b
+OPENDEV device TO file.variable [LOCKED statements] {THEN statements
+endsnippet
+snippet OPENPATH "The OPENPATH statement is similar to the OPEN statement, except that the pathname of the file is specified." b
+OPENPATH pathname [TO file.variable] [ON ERROR statements] {THEN
+endsnippet
+snippet OPENSEQ "Use the OPENSEQ statement to open a file for sequential processing." b
+OPENSEQ filename, record.ID TO file.variable [USING dynamic.array]
+endsnippet
+snippet ORS "Use the ORS function to create a dynamic array of the logical OR of corresponding elements of two dynamic arrays." b
+ORS(array1, array2)
+endsnippet
+snippet PAGE "Use the PAGE statement to print headings, footings, and page advances at the appropriate places on the specified output device." b
+PAGE [ON print.channel] [page#]
+endsnippet
+snippet PERFORM "Use the PERFORM statement to execute a UniVerse sentence, paragraph, menu, or command from within the BASIC program, then return execution to the statement following the PERFORM statement." b
+PERFORM $1
+endsnippet
+snippet PRECISION "Use the PRECISION statement to control the maximum number of decimal places that are output when the system converts a numeric value from internal binary format to an ASCII character string value." b
+PRECISION $1
+endsnippet
+snippet PRINT "Use the PRINT statement to send data to the screen, a line printer, or another print file." b
+PRINT $1
+endsnippet
+snippet PRINTER "Use the PRINTER statement to direct output either to the screen or to a printer." b
+PRINTER $1
+endsnippet
+snippet PRINTERR "Use the PRINTERR statement to print a formatted error message on the bottom line of the terminal." b
+PRINTERR $1
+endsnippet
+snippet PROCREAD "Use the PROCREAD statement to assign the contents of the primary input buffer to a variable." b
+PROCREAD $1 ELSE $1 = ''
+endsnippet
+snippet PROCWRITE "Use the PROCWRITE statement to write string to the primary input buffer." b
+PROCWRITE $1
+endsnippet
+snippet PROGRAM "Use the PROGRAM statement to identify a program." b
+PROG[RAM] [name]
+endsnippet
+snippet PROMPT "Use the PROMPT statement to specify the character to be displayed on the screen when user input is required." b
+PROMPT $1
+endsnippet
+snippet PWR "Use the PWR function to return the value of expression raised to the power specified by power." b
+PWR($1, )
+endsnippet
+snippet QUOTE "Use the QUOTE function to enclose an expression in double quotation marks." b
+QUOTE($1)
+endsnippet
+snippet RAISE "Use the RAISE function to return a value equal to expression, except that system delimiters in expression are converted to the next higher-level delimiter: value marks are changed to field marks, subvalue marks are changed to value marks, and so on." b
+RAISE($1)
+endsnippet
+snippet RANDOMIZE "Use the RANDOMIZE statement with an expression to make the RND function generate the same sequence of random numbers each time the program is run." b
+RANDOMIZE [(expression)]
+endsnippet
+snippet READ "Use READ statements to assign the contents of a record from a UniVerse file to dynamic." b
+READ $1 FROM , ITEM.ID ELSE = ''
+endsnippet
+snippet READBLK "Use the READBLK statement to read a block of data of a specified length from a file opened for sequential processing and assign it to a variable." b
+READBLK variable FROM file.variable, blocksize THEN statements [ELSE
+endsnippet
+snippet READLIST "Use the READLIST statement to read the remainder of an active select list into a dynamic array." b
+READLIST dynamic.array [FROM list.number] { THEN statements [ELSE
+endsnippet
+snippet READNEXT "Use the READNEXT statement to assign the next record ID from an active select list to dynamic." b
+READNEXT $1 ELSE $1 = ''
+endsnippet
+snippet READSEQ "Use the READSEQ statement to read a line of data from a file opened for sequential processing." b
+READSEQ variable FROM file.variable [ON ERROR statements] {THEN
+endsnippet
+snippet READT "Use the READT statement to read the next tape record from a magnetic tape unit and assign its contents to a variable." b
+READT [UNIT(mtu)] variable {THEN statements [ELSE statements] | ELSE
+endsnippet
+snippet READVU "Use the READVU statement to set an update record lock and read the contents of a specified field of a record in a UniVerse file." b
+Status=ReadXMLData(xml_data_handle, rec)
+endsnippet
+snippet REAL "Use the REAL function to convert number into a floating-point number without loss of accuracy." b
+REAL(number)
+endsnippet
+snippet RECORDLOCK "Use RECORDLOCK statements to acquire a record lock on a record without reading the record." b
+RECORDLOCKL file.variable , record.ID [ON ERROR statements] [LOCKED
+endsnippet
+snippet RECORDLOCKED "Use the RECORDLOCKED function to return the status of a record lock." b
+RECORDLOCKED(file.variable , record.ID )
+endsnippet
+snippet RELEASE "Use the RELEASE statement to unlock, or release, locks set by a FILELOCK statement, MATREADL statement, MATREADU statement, READL statement, READU statement, READVL statement, READVU statement, and OPENSEQ statement." b
+RELEASE [file.variable [,record.ID]] [ON ERROR statements]
+endsnippet
+snippet REM "Use the REM statement to insert a comment in a BASIC program." b
+REM [comment.text]
+endsnippet
+snippet REMOVE "Use the REMOVE statement to successively extract dynamic array elements that are separated by system delimiters." b
+REMOVE element FROM dynamic.array SETTING variable
+endsnippet
+snippet REPLACE "Use the REPLACE function to return a copy of a dynamic array with the specified field, value, or subvalue replaced with new data." b
+REPLACE(expression, field#, value#, subvalue# { , | ; } replacement)
+endsnippet
+snippet RETURN "Use the RETURN statement to terminate a subroutine and return control to the calling program or statement." b
+RETURN
+endsnippet
+snippet REUSE "Use the REUSE function to specify that the value of the last field, value, or subvalue be reused in a dynamic array operation." b
+REUSE(expression)
+endsnippet
+snippet REVREMOVE "Use the REVREMOVE statement to successively extract dynamic array elements that are separated by system delimiters." b
+REVREMOVE element FROM dynamic.array SETTING variable
+endsnippet
+snippet REWIND "Use the REWIND statement to rewind a magnetic tape to the beginning-of-tape position." b
+REWIND [UNIT(mtu)] {THEN statements [ELSE statements] | ELSE
+endsnippet
+snippet RIGHT "Use the RIGHT function to extract a substring comprising the last n characters of a string." b
+RIGHT(string, n)
+endsnippet
+snippet RND "Use the RND function to generate any positive or negative random integer or 0." b
+RND(expression)
+endsnippet
+snippet ROLLBACK "Use the ROLLBACK statement to cancel all file I/O changes made during a transaction." b
+ROLLBACK [WORK] [THEN statements] [ELSE statements ]
+endsnippet
+snippet ROUND "Use the ROUND function to round a numeric value to the specified number of decimal places." b
+ROUND(number,places)
+endsnippet
+snippet SADD "Use the SADD function to add two string numbers and return the result as a string number." b
+SADD(string.number.1, string.number.2)
+endsnippet
+snippet SCMP "Use the SCMP function to compare two string numbers and return one of the following three numbers: can use this function in any expression where a string or string number is valid." b
+SCMP(string.number.1, string.number.2)
+endsnippet
+snippet SDIV "Use the SDIV function to divide string." b
+SDIV(string.number.1, string.number.2 [,precision])
+endsnippet
+snippet SEEK "Use the SEEK statement to move the file pointer by an offset specified in bytes, relative to the current position, the beginning of the file, or the end of the file." b
+SEEK file.variable [, offset [, relto]] {THEN statements [ELSE
+endsnippet
+snippet SELECT "Use a SELECT statement to create a numbered select list of record IDs from a UniVerse file or a dynamic array." b
+SELECT $1
+endsnippet
+snippet SELECTE "Use the SELECTE statement to assign the contents of select list 0 to list." b
+SELECTE TO list.variable
+endsnippet
+snippet SELECTINDEX "Use the SELECTINDEX statement to create select lists from secondary indexes." b
+SELECTINDEX index [, alt.key] FROM file.variable [TO list.number]
+endsnippet
+snippet SELECTINFO "Use the SELECTINFO function to determine whether a select list is active, or to determine the number of items it contains." b
+SELECTINFO(list, key)
+endsnippet
+snippet SEND "Use the SEND statement to write a block of data to a device." b
+SEND output [:] TO device { THEN statements [ELSE statements] | ELSE
+endsnippet
+snippet SENTENCE "Use the SENTENCE function to return the stored sentence that invoked the current process." b
+SENTENCE()
+endsnippet
+snippet SEQ "Use the SEQ function to convert an ASCII character to its numeric string equivalent." b
+SEQ(expression)
+endsnippet
+snippet SEQS "Use the SEQS function to convert a dynamic array of ASCII characters to their numeric string equivalents." b
+SEQS(dynamic.array)
+endsnippet
+snippet SETLOCALE "In NLS mode, use the SETLOCALE function to enable or disable a locale for a specified category or change its setting." b
+SETLOCALE(category, value)
+endsnippet
+snippet SETREM "Use the SETREM statement to set the remove pointer in dynamic." b
+SETREM position ON dynamic.array
+endsnippet
+snippet SIGNATURE "The SIGNATURE() function generates a digital signature or verifies a signature using the supplied key." b
+SIGNATURE(algorithm, action, data, dataLoc, key, keyLoc, keyFmt, pass,
+endsnippet
+snippet SIN "Use the SIN function to return the trigonometric sine of an expression." b
+SIN(expression)
+endsnippet
+snippet SINH "Use the SINH function to return the hyperbolic sine of expression." b
+SINH(expression)
+endsnippet
+snippet SLEEP "Use the SLEEP statement to suspend execution of a BASIC program, pausing for a specified number of seconds." b
+SLEEP [seconds]
+endsnippet
+snippet SMUL "Use the SMUL function to multiply two string numbers and return the result as a string number." b
+SMUL(string.number.1, string.number.2)
+endsnippet
+snippet SOUNDEX "The SOUNDEX function evaluates expression and returns the most significant letter in the input string followed by a phonetic code." b
+SOUNDEX(expression)
+endsnippet
+snippet SPACE "Use the SPACE function to return a string composed of blank spaces." b
+SPACE(expression)
+endsnippet
+snippet SPACES "Use the SPACES function to return a dynamic array with elements composed of blank spaces." b
+SPACES(dynamic.array)
+endsnippet
+snippet SPLICE "Use the SPLICE function to create a dynamic array of the element-by-element concatenation of two dynamic arrays, separating concatenated elements by the value of expression." b
+SPLICE(array1, expression, array2)
+endsnippet
+snippet SQUOTE "Use the SQUOTE function to enclose an expression in single quotation marks." b
+SQUOTE(expression )
+endsnippet
+snippet SSELECT "Use an SSELECT statement to create:  ▪ A numbered select list of record IDs in sorted order from a UniVerse file ▪ A numbered select list of record IDs from a dynamic array." b
+SSELECT [variable] [TO list.number] [ON ERROR statements]
+endsnippet
+snippet SSUB "Use the SSUB function to subtract string." b
+SSUB(string.number.1, string.number.2)
+endsnippet
+snippet STATUS "Use the STATUS statement to determine the status of an open file." b
+STATUS dynamic.array FROM file.variable {THEN statements [ELSE
+endsnippet
+snippet STOP "Use the STOP statement to terminate program execution and return system control to the invoking process." b
+STOP [expression]
+endsnippet
+snippet STORAGE "The STORAGE statement performs no function." b
+STORAGE arg1arg2arg3
+endsnippet
+snippet STR "Use the STR function to produce a specified number of repetitions of a particular character string." b
+STR(string, repeat)
+endsnippet
+snippet STRS "Use the STRS function to produce a dynamic array containing the specified number of repetitions of each element of dynamic." b
+STRS(dynamic.array, repeat)
+endsnippet
+snippet SUBR "Use the SUBR function to return the value of an external subroutine." b
+SUBR(name, [argument [,argument …]] )
+endsnippet
+snippet SUBROUTINE "Use the SUBROUTINE statement to identify an external subroutine." b
+SUBROUTINE $1()
+endsnippet
+snippet SUBS "Use the SUBS function to create a dynamic array of the element-by-element subtraction of two dynamic arrays." b
+SUBS(array1, array2)
+endsnippet
+snippet SUBSTRINGS "Use the SUBSTRINGS function to create a dynamic array each of whose elements are substrings of the corresponding elements of dynamic." b
+SUBSTRINGS(dynamic.array, start, length)
+endsnippet
+snippet SUM "Use the SUM function to calculate the sum of numeric data." b
+SUM(dynamic.array)
+endsnippet
+snippet SUMMATION "Use the SUMMATION function to return the sum of all the elements in dynamic." b
+SUMMATION(dynamic.array)
+endsnippet
+snippet SWAP "The SWAP statement interchanges the values in the variables you specify." b
+For variables: SWAP variable1, variable2
+endsnippet
+snippet SYSTEM "Use the SYSTEM function to check on the status of a system function." b
+SYSTEM(expression)
+endsnippet
+snippet TABSTOP "Use the TABSTOP statement to set the current tabstop width for PRINT statement." b
+TABSTOP expression
+endsnippet
+snippet TAN "Use the TAN function to return the trigonometric tangent of expression." b
+TAN(expression)
+endsnippet
+snippet TANH "Use the TANH function to return the hyperbolic tangent of expression." b
+TANH(expression)
+endsnippet
+snippet TERMINFO "Use the TERMINFO function to access the device-independent terminal handler string defined for the current terminal type." b
+TERMINFO(argument)
+endsnippet
+snippet TIME "Use the TIME function to return a string value expressing the internal time of day." b
+TIME()
+endsnippet
+snippet TIMEDATE "Use the TIMEDATE function to return the current system time and date." b
+TIMEDATE()
+endsnippet
+snippet TIMEOUT "Use the TIMEOUT statement to terminate a READSEQ statement or READBLK statement if no data is read in the specified time." b
+TIMEOUT {file.variable | link.number}, time
+endsnippet
+snippet TPARM "Use the TPARM function to evaluate a parameterized terminfo string." b
+TPARM(terminfo.string, [arg1], [arg2], [arg3], [arg4], [arg5], [arg6],
+endsnippet
+snippet TPRINT "Use the TPRINT statement to send data to the screen, a line printer, or another print file." b
+TPRINT [ON print.channel] [print.list]
+endsnippet
+snippet TRANS "Use the TRANS function to return the contents of a field or a record in a UniVerse file." b
+TRANS([DICT] filename, record.ID, field#, control.code)
+endsnippet
+snippet TRIM "Use the TRIM function to remove unwanted characters in expression." b
+TRIM(expression [,character [,option]] )
+endsnippet
+snippet TRIMB "Use the TRIMB function to remove all trailing spaces and tabs from expression." b
+TRIMB(expression)
+endsnippet
+snippet TRIMBS "Use the TRIMBS function to remove all trailing spaces and tabs from each element of dynamic." b
+TRIMBS(dynamic.array)
+endsnippet
+snippet TRIMF "Use the TRIMF function to remove all leading spaces and tabs from expression." b
+TRIMF(expression)
+endsnippet
+snippet TRIMFS "Use the TRIMFS function to remove all leading spaces and tabs from each element of dynamic." b
+TRIMFS(dynamic.array)
+endsnippet
+snippet TRIMS "Use the TRIMS function to remove unwanted spaces and tabs from each element of dynamic." b
+TRIMS(dynamic.array)
+endsnippet
+snippet TRUNC "Use the TRUNC function to truncate a numeric variable or string to a specified number of decimal places." b
+TRUNC(number,places)
+endsnippet
+snippet TTYCTL "Use the TTYCTL statement to set terminal device characteristics on Berkeley terminal drivers." b
+TTYCTL file.variable, code# {THEN statements [ELSE statements] | ELSE
+endsnippet
+snippet TTYGET "Use the TTYGET statement to assign the characteristics of a terminal, line printer channel, or tape unit as a dynamic array to variable." b
+TTYGET variable [FROM {file.variable | LPTR [n] | MTU [n] }] THEN
+endsnippet
+snippet TTYSET "Use the TTYSET statement to set the characteristics of a terminal, line printer channel, or tape unit." b
+TTYSET dynamic.array [ON {file.variable | LPTR [n] | MTU [n] }] {THEN
+endsnippet
+snippet UNASSIGNED "Use the UNASSIGNED function to determine if variable is unassigned." b
+UNASSIGNED(variable)
+endsnippet
+snippet UNICHAR "Use the UNICHAR function to generate a single character from a Unicode value." b
+UNICHAR(unicode)
+endsnippet
+snippet UNICHARS "Use the UNICHARS function to generate a dynamic array of characters from a dynamic array of Unicode values." b
+UNICHARS(dynamic.array)
+endsnippet
+snippet UNISEQ "Use the UNISEQ function to generate a Unicode value from expression." b
+UNISEQ(expression)
+endsnippet
+snippet UNISEQS "Use the UNISEQS function to generate an array of Unicode values from a dynamic array of characters." b
+UNISEQS(dynamic.array)
+endsnippet
+snippet UNLOCK "Use the UNLOCK statement to release a process lock set by the LOCK statement." b
+UNLOCK [expression]
+endsnippet
+snippet UPCASE "Use the UPCASE function to change all lowercase letters in expression to uppercase." b
+UPCASE(expression)
+endsnippet
+snippet UPRINT "In NLS mode, use the UPRINT statement to print data that was mapped to an external format using OCONV mapname." b
+UPRINT [ON print.channel] [print.list ]
+endsnippet
+snippet USERINFO "Use the USERINFO function to get the pid, user number, and more for the pid or user number specified." b
+USERINFO(code, value, userinfo)
+endsnippet
+snippet WEOF "Use the WEOF statement to write an end-of-file (EOF) mark to tape." b
+WEOF [UNIT(mtu)] {THEN statements [ELSE statements] | ELSE statements}
+endsnippet
+snippet WEOFSEQ "Use the WEOFSEQ statement to write an end-of-file (EOF) mark in a file opened for sequential access." b
+WEOFSEQfile.variable [ON ERROR statements]
+endsnippet
+snippet WRITE "Use WRITE statements to write new data to a record in a UniVerse file." b
+WRITE $1 ON .FILE, .ID
+endsnippet
+snippet WRITEBLK "Use the WRITEBLK statement to write a block of data to a file opened for sequential processing." b
+WRITEBLK expression ON file.variable {THEN statements [ELSE statements]
+endsnippet
+snippet WRITELIST "Use the WRITELIST statement to save a list as a record in the &SAVEDLISTS& file." b
+WRITELIST dynamic.array ON listname
+endsnippet
+snippet WRITESEQ "Use the WRITESEQ statement to write new lines to a file opened for sequential processing." b
+WRITESEQ expression {ON | TO} file.variable [ON ERROR statements] {THEN
+endsnippet
+snippet WRITESEQF "Use the WRITESEQF statement to write new lines to a file opened for sequential processing, and to ensure that data is physically written to disk (that is, not buffered) before the next statement in the program is executed." b
+WRITESEQF expression {ON | TO} file.variable [ON ERROR statements]
+endsnippet
+snippet WRITET "Use the WRITET statement to write a tape record to tape." b
+WRITET [UNIT(mtu)] variable {THEN statements [ELSE statements] | ELSE
+endsnippet
+snippet WRITEVU "Use the WRITEVU statement to maintain an update record lock while writing on the contents of a specified field of a record of a UniVerse file." b
+XDOMAddChild(xmlHandle, xpathString, nsMap, nodeHandle,
+endsnippet
+snippet XLATE "Use the XLATE function to return the contents of a field or a record in a UniVerse file." b
+XLATE([DICT] filename, record.ID, field#, control.code)
+endsnippet
+snippet XMLTODB "You can also populate the UniVerse database by calling the UniVerse BASIC XMLTODB function." b
+XMLTODB(xml_document, doc_flag, u2xmapping_rules, u2xmap_ flag, status)
+endsnippet
+snippet XTD "Use the XTD function to convert a string of hexadecimal characters to an integer." b
+XTD(string)
+endsnippet

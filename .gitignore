@@ -3,3 +3,6 @@ undodir/*
 
 # exception to the rule
 !undodir/gitkeep 
+*.swp
+*.swo
+.netrwhist
