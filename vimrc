@@ -2,7 +2,6 @@
 execute pathogen#infect()
 
 set backspace=indent,eol,start
-
 " Turn on syntax highlighting
 syntax on
 
@@ -44,11 +43,8 @@ nnoremap <CR> :noh<CR><CR>
 nnoremap asd :pu! =strftime('%Y-%m-%d')<cr>A<space>
 
 " Set syntax highlighting for BASIC  files
-autocmd BufRead,BufNewFile */BP/* set filetype=unibasic
-autocmd BufRead,BufNewFile */MPROCLIB/* set filetype=unibasic
-
-autocmd BufRead,BufNewFile */BP/* set fileencoding=iso-8859-1
-autocmd BufRead,BufNewFile */MPROCLIB/* set fileencoding=iso-8859-1
+autocmd BufRead,BufNewFile */BP/* set syntax=unibasic
+autocmd BufRead,BufNewFile */MPROCLIB/* set syntax=unibasic
 
 " Formatting for Makefiles so that indents don't screw up
 au BufNewFile,BufRead Makefile set noexpandtab
@@ -56,6 +52,7 @@ au BufNewFile,BufRead Makefile set noexpandtab
 " Goyo settings for distraction free writing
 " Set Goyo to be 80 characters wide
 autocmd BufRead,BufNewFile *.md :Goyo 80
+autocmd BufRead,BufNewFile *.md :set spell spelllang=en_us
 
 function! s:goyo_enter()
     let b:quitting = 0
@@ -77,6 +74,9 @@ endfunction
 
 autocmd! User GoyoEnter call <SID>goyo_enter()
 autocmd! User GoyoLeave call <SID>goyo_leave()
+
+" CoC settings - Taken directly from https://github.com/neoclide/coc.nvim
+
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8

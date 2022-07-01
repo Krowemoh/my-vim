@@ -8,6 +8,7 @@ vimrc is commented.
 
     git clone https://github.com/vim/vim.git
     cd vim
+    ./configure --enable-python3interp --with-python3-config-dir=/usr/bin/python3
     make
     sudo make install
 
@@ -19,7 +20,7 @@ vimrc is commented.
 
 Add the below to your ~/.vimrc file:
     
-    echo "runtime vimrc" > ~/.vimrc
+    runtime vimrc
 
 ## Packages
 
@@ -39,10 +40,6 @@ Install nvm and use the latest version of node to build coc.
 ### Goyo Vim - clean markdown mode
 
     git clone https://github.com/junegunn/goyo.vim.git ~/.vim/bundle/goyo-vim
-
-### NERDTree - file drawer
-
-    git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
 
 ### Vim Polygot - language pack
 

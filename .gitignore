@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # exclude everything
 undodir/*
 
@@ -5,4 +6,9 @@ undodir/*
 !undodir/gitkeep 
 *.swp
 *.swo
+=======
+undodir/
+autoload/
+bundle/
+>>>>>>> 4f47416038b0d5b0e831571bb2af58f87002d4d4
 .netrwhist
