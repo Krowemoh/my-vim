@@ -20,7 +20,7 @@ vimrc is commented.
 
 Add the below to your ~/.vimrc file:
     
-    runtime vimrc
+    echo "runtime vimrc" > ~/.vimrc
 
 ## Packages
 
