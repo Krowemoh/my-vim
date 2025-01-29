@@ -4,15 +4,6 @@ My vim configuration
 
 vimrc is commented.
 
-## Installation - Vim 8.2
-
-    git clone https://github.com/vim/vim.git
-    cd vim
-    ./configure --enable-python3interp --with-python3-config-dir=/usr/bin/python3
-    make
-    sudo make install
-
-
 ## Adding undo
 
     git clone --depth=1 https://github.com/Krowemoh/my-vim.git ~/.vim
