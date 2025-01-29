@@ -7,14 +7,11 @@ vimrc is commented.
 ## Basic Setup
 
     git clone --depth=1 https://github.com/Krowemoh/my-vim.git ~/.vim
-
+    echo "runtime vimrc" > ~/.vimrc
+    
 ## Adding undo
 
     mkdir ~/.vim/undodir
-
-Add the below to your ~/.vimrc file:
-    
-    echo "runtime vimrc" > ~/.vimrc
 
 ## Packages
 
