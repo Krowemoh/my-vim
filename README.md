@@ -4,9 +4,12 @@ My vim configuration
 
 vimrc is commented.
 
-## Adding undo
+## Basic Setup
 
     git clone --depth=1 https://github.com/Krowemoh/my-vim.git ~/.vim
+
+## Adding undo
+
     mkdir ~/.vim/undodir
 
 Add the below to your ~/.vimrc file:
